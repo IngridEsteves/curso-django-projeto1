@@ -5,7 +5,7 @@ from django.http import HttpResponse
 # Create your views here.
 # HTTP Request
 def home(request):
-    return HttpResponse('HOME 1')
+    return render(request, 'recipes/home.html')
     # return HTTP Response
 
 
