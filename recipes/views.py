@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 # Create your views here.
@@ -11,11 +10,11 @@ def home(request):
 
 # HTTP Request
 def sobre(request):
-    return HttpResponse('SOBRE')
+    return render(request, 'recipes/sobre.html')  
     # return HTTP Response
 
 
 # HTTP Request
 def contato(request):
-    return HttpResponse('CONTATO')
+    return render(request, 'recipes/contato.html')
     # return HTTP Response
