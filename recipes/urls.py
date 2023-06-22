@@ -4,5 +4,5 @@ from recipes.views import home
 
 # dominio/
 urlpatterns = [
-    path('', home), # home /
+    path('', home),  # home /
 ]
