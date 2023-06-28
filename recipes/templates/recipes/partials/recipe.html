@@ -3,34 +3,34 @@
         <img src="" alt="Bolo de Cenoura">
     </div>
     <div class="recipe-title-container">
-        <h2 class="recipe-title"> Bolo de Cenoura</h2>
+        <h2 class="recipe-title">{{ recipe.title }}</h2>
     </div>
     <div class="recipe-author">
         <span class="recipe-author-item">
             <i class="fas fa-user"></i>
-            Lilian Almeida Esteves
+            {{ recipe.author.first_name }} {{ recipe.author.last_name }}
         </span>
         <span class="recipe-author-item">
-            <i class="fas fa-calendar-alt"></i> 30/04/20223 as 18:45
+            <i class="fas fa-calendar-alt"></i>{{ recipe.created_at|date:"d/m/Y" }} às {{ recipe.created_at|date:"H:i" }}
         </span>
         <span class="recipe-author-item">
-            <a href="recipes/category/cafe-da-manha/"><i class="fas fa-layer-group"></i><span>Café da Manhã</span></a>
+            <a href="recipes/category/cafe-da-manha/"><i class="fas fa-layer-group"></i><span>{{ recipe.category.name }}</span></a>
         </span>
     </div>
     <div class="recipe-content">
-        <p>Aprenda a fazer um delicioso bolo de cenoura</p>
+        <p>{{ recipe.description }}</p>
     </div>
     <div class="recipe-meta-container">
         <div class="recipe-meta recipe-preparation">
             <h3 class="recipe-meta-title"><i class="fas fa-stopwatch"></i> Preparo</h3>
             <div class="recipe-meta-text">
-                45 Minutos
+                {{ recipe.preparation_time }} {{ recipe.preparation_time_unit }}
             </div>
         </div>
         <div class="recipe-meta recipe-servings">
             <h3 class="recipe-meta-title"><i class="fas fa-pizza-slice"></i> Porções</h3>
             <div class="recipe-meta-text">
-                10 Porções
+                {{ recipe.servings }} {{ recipe.servings_unit }}
             </div>
         </div>
     </div>
