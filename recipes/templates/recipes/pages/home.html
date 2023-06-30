@@ -6,6 +6,10 @@
 <div class="main-content main-containt-list container flex flex-wrap">
     {% for recipe in recipes %}
         {% include 'recipes/partials/recipe.html' %}
+    {% empty %}
+        <div class="center m-y">
+            <h1>Que pena! Ainda não existem receitas cadastradas :(</h1>
+        </div>
     {% endfor %}   
 </div>
 {% endblock content %}
